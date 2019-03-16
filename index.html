@@ -7,41 +7,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="main.js"></script>
+    <!--<script src="main.js"></script>-->
 </head>
 <body>
 
-    <h1>Welcome, let's build your DFA.</h1>
+    <h1>Welcome, let's build your <span>DFA</span>.</h1>
 
 
     <!-- alphabet -->
     <div class="div1">
         <input type="text" placeholder="Enter the alphabet..." id="alphabet"><br>
-        <button type="button">Next: States</button>
+        <button type="button" id="btn1">Next: States</button>
     </div>
     <!-- states -->
     <div class="div2">
         <input type="text" placeholder="Enter the states..." id="states"><br>
-        <button type="button">Next: Start State</button>
+        <button type="button" id="btn2">Next: Start State</button>
     </div>
     <!-- start state -->
     <div class="div3">
         <input type="text" placeholder="Enter the start state..." id="start"><br>
-        <button type="button">Next: Accept States</button>
+        <button type="button" id="btn3">Next: Accept States</button>
     </div>
     <!-- accept states -->
     <div class="div4">
         <input type="text" placeholder="Enter the accept states..." id="accept"><br>
-        <button type="button">Next: Transitions</button>
+        <button type="button" id="btn4">Next: Transitions</button>
     </div>
     <!-- transition functions -->
     <div class="div5">
         <input type="text" placeholder="Enter the transition functions..." id="transitions"><br>
-        <button type="button">Create DFA</button>
+        <button type="button" id="btn5">Create DFA</button>
     </div>
 
-    <script>
-    
-    </script>
+<script>
+    $(document).ready(function() {
+        $("div").hide();    //hide all inputs
+        setTimeout(function() { // display first input upon load
+            $('.div1').fadeIn(2000);
+        }, 3000);
+
+        $('#btn1').click(function() {
+            $('.div1').hide();
+            $('.div2').fadeIn(1000);
+        });
+
+        $('#btn2').click(function() {
+            $('.div2').hide();
+            $('.div3').fadeIn(1000);
+        });
+
+        $('#btn3').click(function() {
+            $('.div3').hide();
+            $('.div4').fadeIn(1000);
+        });
+
+        $('#btn4').click(function() {
+            $('.div4').hide();
+            $('.div5').fadeIn(1000);
+        });
+    });
+</script>
 </body>
 </html>
