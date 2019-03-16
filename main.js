@@ -29,4 +29,31 @@ document.getElementById("btn2").addEventListener("click", () => {
         }
     }
 });
+
+document.getElementById("btn3").addEventListener("click", () => {
+    var input = document.getElementById("start").value;
+    startState = input;
+});
+
+document.getElementById("btn4").addEventListener("click", () => {
+    var input = document.getElementById("accept").value;
+    for(var i = 0; i < input.length; i++) {
+        if(input.substring(i, i+1) == "," || input.substring(i, i+1) == " ") {
+            continue;
+        } else {
+            acceptStates.push(input.substring(i, i+1));
+        }
+    }
+});
+
+document.getElementById("btn5").addEventListener("click", () => {
+    var input = document.getElementById("transitions").value;
+    for(var i = 0; i < input.length; i++) {
+        if(input.substring(i, i+1) == "," || input.substring(i, i+1) == " ") {
+            continue;
+        } else {
+            transitions.push(input.substring(i, i+1));
+        }
+    }
+});
 }
