@@ -75,7 +75,6 @@ window.onload=function() {
 
         createTable();
     });
-
     function createTransitionTable() {
         transitionTable = new Array(states.length);
         for(var i = 0; i < transitionTable.length; i++) {
@@ -152,5 +151,4 @@ window.onload=function() {
         }
         td.innerHTML = insert;
     }
-
 }
