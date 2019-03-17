@@ -58,6 +58,7 @@ window.onload=function() {
         }
 
         createTransitionTable();
+        fillTransitionTable();
     });
 
     function createTransitionTable() {
@@ -68,6 +69,12 @@ window.onload=function() {
     }
 
     function fillTransitionTable() {
-        
+        //go through transitions array by sets of 3
+        for(var i = 0; i < transitions.length; i+=3) {
+            var state = transitions[i];
+            var alpha = transitions[i+1];
+            var end = transitions[i+2];
+            transitionTable[states.indexOf(state)][alphabet.indexOf(alpha)] = end;
+        }
     }
 }
