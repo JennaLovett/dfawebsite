@@ -48,3 +48,17 @@ button:hover {
     background-color: #008CBA;
     color: white;
 }
+
+table, td {  
+    border: 1px solid #ddd;
+    text-align: left;
+}
+  
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+td {
+    padding: 15px;
+}

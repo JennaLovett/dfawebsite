@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <h1>Welcome, let's build your <span>DFA</span>.</h1>
+    <h1 id="initHeader">Welcome, let's build your <span>DFA</span>.</h1>
 
 
     <!-- alphabet -->
@@ -40,6 +40,42 @@
         <button type="button" id="btn5">Create DFA</button>
     </div>
 
+    <div class="div6">
+        <h1>Creating your <span>DFA</span>...</h1>
+    </div>
+
+    <div class="div7">
+        <h1>Enter a string to test.</h1>
+        <input type="text" placeholder="Enter a string" id="testString"><br>
+        <button type="button" id="btn6">Test String</button>
+    </div>
+
+    <div class="div8">
+        <h1 id="dfaH1"></h1>
+        <table id="dfatable">
+            <tr>
+                <td>Alphabet</td>
+                <td class="td"></td>
+            </tr>
+            <tr>
+                <td>States</td>
+                <td class="td"></td>
+            </tr>
+            <tr>
+                <td>Start State</td>
+                <td class="td"></td>
+            </tr>
+            <tr>
+                <td>Accept States</td>
+                <td class="td"></td>
+            </tr>
+            <tr>
+                <td>Transitions</td>
+                <td class="td"></td>
+            </tr>
+        </table>
+    </div>
+
 <script>
     $(document).ready(function() {
         $("div").hide();    //hide all inputs
@@ -66,7 +102,22 @@
             $('.div4').hide();
             $('.div5').fadeIn(1000);
         });
-    });
+
+        $('#btn5').click(function() {
+            $('.div5').hide();
+            $('#initHeader').hide();
+            $('.div6').fadeIn(1000);
+            setTimeout(function() {
+                $('.div6').fadeOut(1000);
+                $('.div7').fadeIn(2000);
+            }, 3000);
+        });
+
+        $('#btn6').click(function() {
+            $('.div7').hide();
+            $('.div8').fadeIn(1000);
+        });
+    });  
 </script>
 </body>
 </html>
