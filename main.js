@@ -151,6 +151,6 @@ window.onload=function() {
             insert += "(" + transitions[i] + ", " + transitions[i+1] + ") &rarr; " + transitions[i+2] + "<br>";
         }
         td.innerHTML = insert;
-        
     }
+
 }
