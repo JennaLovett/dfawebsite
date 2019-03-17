@@ -50,7 +50,7 @@ button:hover {
 }
 
 table, td {  
-    border: 1px solid #ddd;
+    border-bottom: 2px solid rgb(204, 204, 204);
     text-align: left;
 }
   
@@ -61,4 +61,13 @@ table {
   
 td {
     padding: 15px;
+}
+
+tr:hover {
+    background-color: rgb(236, 236, 236);
+}
+
+.tdh {
+    color: #008CBA;
+    font-size: 20px;
 }
