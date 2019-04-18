@@ -72,3 +72,44 @@ tr:hover {
     color: #008CBA;
     font-size: 20px;
 }
+
+/*phones*/
+@media only screen and (max-width: 600px) {
+
+    div {
+        width: 400px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    input[type=text]{
+        width: 200px;
+        padding: 10px 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin: auto;
+        margin-top: 50px;
+        display: block;
+    }
+
+    table, td {  
+        border-bottom: 2px solid rgb(204, 204, 204);
+        text-align: left;
+    }
+      
+    table {
+        border-collapse: collapse;
+        width: 90%;
+        margin-bottom: 20px;
+        margin: auto;
+    }
+      
+    td {
+        padding: 5px;
+    }
+
+    .tdh {
+        color: #008CBA;
+        font-size: 12px;
+    }
+}
