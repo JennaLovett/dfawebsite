@@ -11,10 +11,11 @@ window.onload=function() {
     var isInLanguage;
 
     //adding event listeners and getting input
+    //event listener for sigma
     document.getElementById("btn1").addEventListener("click", () => {
         var input = document.getElementById("alphabet").value;
         for(var i = 0; i < input.length; i++) {
-            if(input.substring(i, i+1) == "," || input.substring(i, i+1) == " ") {
+            if(input.substring(i, i+1) == "," || input.substring(i, i+1) == " " || input.substring(i, i+1) == "{" || input.substring(i, i+1) == "}") {
                 continue;
             } else {
                 alphabet.push(input.substring(i, i+1));
@@ -22,10 +23,11 @@ window.onload=function() {
         }
     });
 
+    //event listener for dfa states
     document.getElementById("btn2").addEventListener("click", () => {
         var input = document.getElementById("states").value;
         for(var i = 0; i < input.length; i++) {
-            if(input.substring(i, i+1) == "," || input.substring(i, i+1) == " ") {
+            if(input.substring(i, i+1) == "," || input.substring(i, i+1) == " " || input.substring(i, i+1) == "{" || input.substring(i, i+1) == "}") {
                 continue;
             } else {
                 states.push(input.substring(i, i+1));
@@ -33,15 +35,17 @@ window.onload=function() {
         }
     });
 
+    //event listener for start state
     document.getElementById("btn3").addEventListener("click", () => {
         var input = document.getElementById("start").value;
         startState = input;
     });
 
+    //event listener for accept states
     document.getElementById("btn4").addEventListener("click", () => {
         var input = document.getElementById("accept").value;
         for(var i = 0; i < input.length; i++) {
-            if(input.substring(i, i+1) == "," || input.substring(i, i+1) == " ") {
+            if(input.substring(i, i+1) == "," || input.substring(i, i+1) == " " || input.substring(i, i+1) == "{" || input.substring(i, i+1) == "}") {
                 continue;
             } else {
                 acceptStates.push(input.substring(i, i+1));
@@ -49,10 +53,11 @@ window.onload=function() {
         }
     });
 
+    //event listener for transitions table
     document.getElementById("btn5").addEventListener("click", () => {
         var input = document.getElementById("transitions").value;
         for(var i = 0; i < input.length; i++) {
-            if(input.substring(i, i+1) == "," || input.substring(i, i+1) == " ") {
+            if(input.substring(i, i+1) == "," || input.substring(i, i+1) == " " || input.substring(i, i+1) == "-" || input.substring(i, i+1) == ">" || input.substring(i, i+1) == "(" || input.substring(i, i+1) == ")") {
                 continue;
             } else {
                 transitions.push(input.substring(i, i+1));
