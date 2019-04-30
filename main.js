@@ -80,6 +80,22 @@ window.onload=function() {
 
         createTable();
     });
+
+    document.getElementById("btn7").addEventListener("click", () => {
+        testStr = "";
+    });
+
+    document.getElementById("btn8").addEventListener("click", () => {
+        testStr = "";
+        alphabet = [];
+        states = [];
+        startState = "";
+        acceptStates = [];
+        transitions = [];
+        transitionTable;
+        testStr;
+        isInLanguage;
+    });
     function createTransitionTable() {
         transitionTable = new Array(states.length);
         for(var i = 0; i < transitionTable.length; i++) {

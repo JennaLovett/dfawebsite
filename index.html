@@ -75,6 +75,8 @@
                 <td class="td"></td>
             </tr>
         </table>
+        <button type="button" id="btn7">Test Another String</button>
+        <button type="button" id="btn8">Start Over</button>
     </div>
 
 <script>
@@ -117,6 +119,24 @@
         $('#btn6').click(function() {
             $('.div7').hide();
             $('.div8').fadeIn(1000);
+        });
+
+        $('#btn7').click(function() {
+            $('.div8').hide();
+            $('#testString').val("");
+            $('.div7').fadeIn(1000);
+        });
+
+        $('#btn8').click(function() {
+            $('.div8').hide();
+            $('.div1').fadeIn(1000);
+            $('#initHeader').fadeIn(1000);
+            $('#alphabet').val("");
+            $('#states').val("");
+            $('#start').val("");
+            $('#accept').val("");
+            $('#transitions').val("");
+            $('#testString').val("");
         });
     });  
 </script>
